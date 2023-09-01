@@ -1,0 +1,54 @@
+---
+title: "BEE 4750/5750 Homework 1"
+author: "Your name here (your netID here)"
+date: `j import Dates; Dates.Date(Dates.now())`
+weave_options:
+    term: true
+    cache: off
+    md2pdf:
+        template: "bee4750pdf.tpl"
+    md2html:
+        template: "bee4750html.tpl"
+---
+
+<!-- This setups the environment and installs packages, but doesn't appear in the generated document -->
+<!-- You shouldn't need to modify this -->
+```julia; echo = false; results = "hidden"
+using Pkg
+Pkg.activate(dirname(@__FILE__))
+Pkg.instantiate()
+```
+
+# Problem 1
+
+## Problem 1.1
+
+```julia
+using GraphRecipes, Plots
+
+A = [0 1 1 1;
+		 0 0 0 1;
+		 0 0 0 1;
+   	 	 0 0 0 0]
+	
+names = ["Plant", "Land Treatment", "Chem Treatment", "Pristine Brook"]
+shapes=[:hexagon, :rect, :rect, :hexagon]
+xpos = [0, -1, -0.25, 1]
+ypos = [1, 0, 0, -1]
+
+graphplot(A, names=names, markersize=0.15, markershapes=shapes, markercolor=:white, x=xpos, y=ypos)
+```
+
+## Problem 1.2
+
+## Problem 1.3
+
+## Problem 1.4
+
+## Problem 1.5
+
+## Problem 1.6
+
+## Problem 1.7
+
+# References
